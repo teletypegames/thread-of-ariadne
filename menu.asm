@@ -1,6 +1,6 @@
 ; -----------------------------------------------------------
 ; menu.asm - full-screen menu card: big THREAD OF / ARIADNE
-; title under the rolling gold wash over the dark rings of
+; title under the rolling Aegean wash over the dark rings of
 ; the labyrinth, and a four-item menu: play / options /
 ; story / credits (joystick or w/s up/down + fire, space or
 ; return)
@@ -19,7 +19,7 @@ menu_init:
     lda #CY
     sta gcy0
     jsr gen_all
-    lda #DGREY
+    lda #BLUE
     sta rcol
     lda #RMIN
     sta ptmp
@@ -54,8 +54,8 @@ mi_pcol:
     cpx #25
     bne mi_panel
 
-    +prbig 1, 2, YELLOW, txt_t1, 9
-    +prbig 7, 6, ORANGE, txt_t2, 7
+    +prbig 1, 2, CYAN, txt_t1, 9
+    +prbig 7, 6, LBLUE, txt_t2, 7
     +prtext 13, 13, LGREY, txt_ttgname, 14
 
     lda #0
@@ -66,7 +66,7 @@ mi_pcol:
     rts
 
 menu_update:
-    jsr wash_title       ; gold sun wash on both title lines
+    jsr wash_title       ; Aegean wash on both title lines
 
     ; joystick up/down steps the cursor (edge detected)
     jsr read_joy
@@ -136,7 +136,7 @@ mm_items:
     clc
     adc #$d4             ; same cell in color RAM
     sta scrhi
-    lda #YELLOW
+    lda #CYAN
     sta (scrlo),y
 
 mu_start:
@@ -177,7 +177,7 @@ draw_mitem:
     lda #WHITE
     cpx menusel
     bne dm_store
-    lda #YELLOW
+    lda #CYAN
 dm_store:
     sta pcolor
     jmp print_text

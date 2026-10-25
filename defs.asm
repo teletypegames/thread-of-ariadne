@@ -122,12 +122,13 @@ SP_HERO  = 0             ; player 1, Theseus
 SP_SEL   = 1             ; player 2, Ariadne's ring selector
 SP_MINO  = 2             ; the minotaurs ride sprites 2-3
 
-; ---- Cretan palette ----
-COL_WALL   = LGREY       ; marble rings
-COL_SEL    = YELLOW      ; the ring Ariadne holds
-COL_PILLAR = BROWN       ; corridor pillars
+; ---- Minoan palette: the turquoise and blue of the frescoes
+; and the sea, white stone, red ochre ----
+COL_WALL   = LGREY       ; white stone rings
+COL_SEL    = CYAN        ; the ring Ariadne holds
+COL_PILLAR = RED         ; red Cretan columns across the corridors
 COL_THREAD = LRED        ; Ariadne's red thread
-COL_RIM    = GREEN       ; the rim (it glimmers to light green)
+COL_RIM    = LBLUE       ; the rim: the glimmer of the sea outside
 COL_MINO   = ORANGE      ; the minotaurs
 STATCOL    = BLUE        ; background band behind the status row
 

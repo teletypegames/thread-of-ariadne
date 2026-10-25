@@ -32,10 +32,10 @@ lose_update:
     lda framectr
     and #32
     bne lu_hide
-    +prtext 19, 12, YELLOW, txt_retry, txt_retrye-txt_retry
+    +prtext 19, 12, CYAN, txt_retry, txt_retrye-txt_retry
     jmp lu_input
 lu_hide:
-    +prtext 19, 12, YELLOW, txt_blank, txt_retrye-txt_retry
+    +prtext 19, 12, CYAN, txt_blank, txt_retrye-txt_retry
 lu_input:
     ; fire or space: straight back in with a fresh maze
     jsr start_edge

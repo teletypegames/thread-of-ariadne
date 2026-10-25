@@ -1,6 +1,6 @@
 ; -----------------------------------------------------------
 ; win.asm - the escape screen after the last level: big
-; ESCAPED with the gold wash, the run's time and score; fire
+; ESCAPED with the Aegean wash, the run's time and score; fire
 ; returns to the main menu
 ; -----------------------------------------------------------
 
@@ -9,7 +9,7 @@ win_init:
     lda #MUS_WIN
     jsr music_play       ; the escape song
 
-    +prbig 3, 6, YELLOW, txt_escaped, 7
+    +prbig 3, 6, CYAN, txt_escaped, 7
 
     +prtext 11, 5, WHITE, txt_welldone, txt_welldonee-txt_welldone
     +prtext 13, 7, LGREY, txt_beaten, txt_beatene-txt_beaten
@@ -34,7 +34,7 @@ win_init:
     jsr bcd_chars
     stx txt_scorev+2
     sta txt_scorev+3
-    +prtext 17, 14, YELLOW, txt_wscore, txt_wscoree-txt_wscore
+    +prtext 17, 14, CYAN, txt_wscore, txt_wscoree-txt_wscore
 
     lda #0
     sta washphase
@@ -42,7 +42,7 @@ win_init:
     rts
 
 win_update:
-    ; the border celebrates along on the same gold ramp
+    ; the border celebrates along on the same Aegean ramp
     lda framectr
     lsr
     lsr
@@ -51,7 +51,7 @@ win_update:
     lda washtbl,x
     sta borbase
 
-    ; the gold wash rolls down the big letters (rows 3-7)
+    ; the Aegean wash rolls down the big letters (rows 3-7)
     inc washphase
     lda #0
     sta rtmp2
@@ -89,10 +89,10 @@ wu_skip:
     lda framectr
     and #32
     bne wu_hide
-    +prtext 20, 14, YELLOW, txt_firemenu, txt_firemenue-txt_firemenu
+    +prtext 20, 14, CYAN, txt_firemenu, txt_firemenue-txt_firemenu
     jmp wu_input
 wu_hide:
-    +prtext 20, 14, YELLOW, txt_blank, txt_firemenue-txt_firemenu
+    +prtext 20, 14, CYAN, txt_blank, txt_firemenue-txt_firemenu
 wu_input:
     jsr start_edge
     beq wu_stay

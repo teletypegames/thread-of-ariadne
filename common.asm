@@ -366,7 +366,7 @@ bigmap:                  ; screen code (a=1..z=26) -> glyph index
     !byte  0,  7,  8,  9, 10, 11,  0, 12, 13, 14   ; k-t
     !byte 20, 18, 21,  0, 15,  0                   ; u-z
 
-; ---- gold wash over the two big title lines (rows 1-5 and
+; ---- the Aegean wash over the two big title lines (rows 1-5 and
 ; 7-11): only the $a0 letter blocks are recolored, so it is
 ; safe over any backdrop ----
 wash_title:
@@ -413,13 +413,13 @@ txt_presents:!scr "presents"
 txt_return:  !scr "fire = return"
 txt_blank:   !fill 16, $20
 
-washtbl:                 ; gold glow ramp (16 entries, cyclic)
-    !byte $09, $02, $08, $0a, $07, $07, $01, $01
-    !byte $01, $01, $07, $07, $0a, $08, $02, $09
+washtbl:                 ; Aegean ramp: deep blue - turquoise - white
+    !byte $06, $06, $0e, $0e, $03, $03, $01, $01
+    !byte $01, $01, $03, $03, $0e, $0e, $06, $06
 
 ; ---- shared variables ----
 framectr:  !byte 0       ; frame counter, incremented by the main loop
-washphase: !byte 0       ; gold wash offset on the big letters
+washphase: !byte 0       ; title wash offset on the big letters
 seed:      !byte $a7     ; rand8 LFSR state
 fheld:     !byte 0       ; fire/space edge detection state
 joyb:      !byte 0       ; player 1 input bits from read_joy

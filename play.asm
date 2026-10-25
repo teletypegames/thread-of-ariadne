@@ -50,7 +50,7 @@ play_init:
     clc
     adc #$31
     sta SCREEN+6
-    lda #YELLOW
+    lda #CYAN
     sta COLRAM+6
     +prtext 0, 16, WHITE, txt_thread, 6
     +prtext 0, 28, WHITE, txt_score, 5
@@ -793,7 +793,7 @@ us_ccol:
     sta SCREEN+24
     pla
     cmp #10              ; the last few lengths glow red
-    lda #LGREEN
+    lda #CYAN
     bcs us_tcol
     lda #LRED
 us_tcol:
@@ -820,7 +820,7 @@ put_bcd:                 ; BCD byte A as two digits at row 0, column X
     and #$0f
     ora #$30
     sta SCREEN+1,x
-    lda #YELLOW
+    lda #CYAN
     sta COLRAM,x
     sta COLRAM+1,x
     rts

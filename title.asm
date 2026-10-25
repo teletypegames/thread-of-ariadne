@@ -1,6 +1,6 @@
 ; -----------------------------------------------------------
 ; title.asm - the title card between the TTG logo and the
-; menu: big THREAD OF / ARIADNE under the rolling gold wash,
+; menu: big THREAD OF / ARIADNE under the rolling Aegean wash,
 ; below it the two inner rings of the labyrinth with a door
 ; in each, and the red thread winding out of the heart
 ; through them, a cell at a time, Theseus at its end;
@@ -17,8 +17,8 @@ title_init:
     lda #MUS_TITLE
     jsr music_play       ; already playing: it rolls on unbroken
 
-    +prbig 1, 2, YELLOW, txt_t1, 9
-    +prbig 7, 6, ORANGE, txt_t2, 7
+    +prbig 1, 2, CYAN, txt_t1, 9
+    +prbig 7, 6, LBLUE, txt_t2, 7
 
     ; rings 3 and 5 around the little heart, a door in each
     lda #CX
@@ -63,7 +63,7 @@ title_door:              ; open cells 0 and 1 of the current ring
     rts
 
 title_update:
-    jsr wash_title       ; the gold wash rolls down the title
+    jsr wash_title       ; the Aegean wash rolls down the title
 
     ; the thread winds on, a cell every TPATH_STEP frames
     dec tstep

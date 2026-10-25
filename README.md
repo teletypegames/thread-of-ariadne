@@ -9,8 +9,8 @@ Theseus has reached its heart - now he must find the way out, and
 Ariadne's red thread follows him.
 
 **Player 1** (joystick 2, or `w a s d`) is Theseus. He starts in the
-heart of an octagonal labyrinth and runs for its rim, the glimmering
-green ring around it. Every fresh cell he steps on unwinds one length
+heart of an octagonal labyrinth and runs for its rim, the ring of sea
+light glimmering around it. Every fresh cell he steps on unwinds one length
 of the thread and marks the cell; stepping back onto the cell he came
 from winds that length up again. The thread may not cross itself, so
 anywhere else a thread cell is a wall for him - and for the
@@ -20,8 +20,8 @@ way.
 
 **Player 2** (joystick 1, or `i j k l`) is Ariadne. She never moves
 Theseus: she holds one of the four concentric rings (up / down picks
-a ring further out or in, the one she holds is yellow, a bracket sits
-on its top) and turns it (left / right, counterclockwise / clockwise,
+a ring further out or in, the one she holds is turquoise, a bracket
+sits on its top) and turns it (left / right, counterclockwise / clockwise,
 one cell a step; hold fire to turn fast), so its doors slide round to
 where Theseus can step through. A ring cannot turn while the thread,
 Theseus or a minotaur is in one of its doors (the border blips red) -
@@ -48,11 +48,14 @@ of the RAM tables at `$4000`: screen position, glyph, door flag and
 screen address per cell; a turn moves each door one cell on, which
 shuts one cell and opens another.
 
-The look: marble rings, brown Cretan pillars, the red thread knotted
-cell to cell, sprites for Theseus (a crested helmet), Ariadne's
+The look is Minoan, the turquoise and blue of the frescoes and the
+sea: white stone rings, the one in hand turquoise, red Cretan
+columns, the red thread knotted cell to cell, the rim glimmering sea
+blue, sprites for Theseus (a crested helmet), Ariadne's
 selector and the bulls, a blue raster band behind the status row and
-a fade to black between all screens. The menu floats over the dark
-rings under the big gold-washed title.
+a fade to black between all screens. The titles roll an Aegean
+wash (deep blue - turquoise - white) and the menu floats over the
+dark blue rings.
 
 Under it all runs the music, written in the dorian mode on d - the
 old greek mode: a plucked lyre over a drone through the front end,
@@ -110,7 +113,7 @@ x64sc +sound -warp -limitcycles 15000000 -exitscreenshot shot.png \
 - `main.asm` - entry point, BASIC stub, per-frame state machine,
   the border/status-band raster work
 - `defs.asm` - registers, constants, zero page, RAM tables, macros
-- `intro.asm` - TTG boot logo with the gold color wash
+- `intro.asm` - TTG boot logo with the Aegean color wash
 - `title.asm` - title card: the thread winds out of the heart
 - `menu.asm` - main menu card over the dark rings
 - `options.asm` - the optional extras and their toggle screen

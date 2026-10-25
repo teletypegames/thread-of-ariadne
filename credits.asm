@@ -24,9 +24,9 @@ ci_bars:
 
     +prtext  9, 13, WHITE,  txt_ttgname, 14
 
-    +prtext 12,  8, YELLOW, txt_crew0, txt_crew0e-txt_crew0
-    +prtext 13, 10, LGREEN, txt_crew1, txt_crew1e-txt_crew1
-    +prtext 14,  9, CYAN,   txt_crew2, txt_crew2e-txt_crew2
+    +prtext 12,  8, CYAN,   txt_crew0, txt_crew0e-txt_crew0
+    +prtext 13, 10, LBLUE,  txt_crew1, txt_crew1e-txt_crew1
+    +prtext 14,  9, WHITE,  txt_crew2, txt_crew2e-txt_crew2
     +prtext 15, 10, LRED,   txt_crew3, txt_crew3e-txt_crew3
 
     +prtext 17,  9, LGREY,  txt_ai1, txt_ai1e-txt_ai1
@@ -130,10 +130,10 @@ cu_p2:
     lda framectr
     and #32
     bne cu_hide
-    +prtext 21, 13, YELLOW, txt_return, 13
+    +prtext 21, 13, CYAN, txt_return, 13
     jmp cu_input
 cu_hide:
-    +prtext 21, 13, YELLOW, txt_blank, 13
+    +prtext 21, 13, CYAN, txt_blank, 13
 cu_input:
     jsr start_edge
     beq cu_stay

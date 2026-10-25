@@ -86,7 +86,7 @@ oo_items:
     lda opt_level        ; the start level as a digit
     ora #$30
     sta SCREEN+13*40+24
-    lda #LGREEN
+    lda #CYAN
     sta COLRAM+13*40+24
     ldx opt_music
     lda #15
@@ -115,7 +115,7 @@ oo_items:
     clc
     adc #$d4             ; same cell in color RAM
     sta scrhi
-    lda #YELLOW
+    lda #CYAN
     sta (scrlo),y
 
 ou_fire:
@@ -191,7 +191,7 @@ draw_oitem:
     lda #WHITE
     cpx optsel
     bne do_store
-    lda #YELLOW
+    lda #CYAN
 do_store:
     sta pcolor
     jmp print_text
@@ -226,7 +226,7 @@ ocur_hi:
     !byte >(SCREEN+13*40+7), >(SCREEN+15*40+7), >(SCREEN+17*40+7)
 ovtx_lo:   !byte <txt_off, <txt_on
 ovtx_hi:   !byte >txt_off, >txt_on
-ovcol:     !byte LGREY, LGREEN
+ovcol:     !byte LGREY, CYAN
 
 ; ---- option texts ----
 txt_omino:  !scr "minotaurs"

@@ -1,6 +1,6 @@
 ; -----------------------------------------------------------
 ; intro.asm - boot screen ported from rabbitc64: giant TTG
-; letters built from 8x8 bitmaps with a gold color wash
+; letters built from 8x8 bitmaps with an Aegean color wash
 ; running down them, TELETYPE GAMES / PRESENTS below;
 ; advances to the title card after a few seconds or
 ; on fire
@@ -44,7 +44,7 @@ intro_init:
     rts
 
 intro_update:
-    ; gold wash: recolor the letter rows from the cyclic ramp
+    ; Aegean wash: recolor the letter rows from the cyclic ramp
     inc washphase
     lda #0
     sta g8row
@@ -111,7 +111,7 @@ g8_bit:
     bcc g8_next
     lda #$a0             ; inverse space = solid block
     sta (scrlo),y
-    lda #YELLOW
+    lda #CYAN
     sta (collo),y
 g8_next:
     iny
