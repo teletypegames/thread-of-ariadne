@@ -1,0 +1,10 @@
+{
+  "name": "thread-of-ariadne",
+  "title": "Thread of Ariadne",
+  "author": "Teletype Games",
+  "desc": "Two-player co-op labyrinth escape: Theseus runs from the heart of an octagonal labyrinth to its rim with Ariadne's red thread unwinding behind him, while Ariadne turns the four rings so their doors open the way. Minotaurs roam the corridors through eight levels, the thread shorter on each.",
+  "site": "https://wiki.teletypegames.org/projects/thread-of-ariadne",
+  "repo": "https://git.teletypegames.org/games/thread-of-ariadne",
+  "license": "MIT",
+  "version": "1.0.0"
+}
